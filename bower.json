@@ -1,0 +1,23 @@
+{
+  "name": "zombispormedio.github.io",
+  "homepage": "http://zombispormedio.github.io",
+  "authors": [
+    "Xavier Serrano <zombispormedio007@gmail.com>"
+  ],
+  "description": "Zombispormedio Main Page",
+  "main": "index.html",
+  "keywords": [
+    "presentation",
+    "about",
+    "page"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
