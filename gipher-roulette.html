@@ -1,0 +1,104 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="bower_components/iron-image/iron-image.html">
+<!--
+`gipher-roulette`
+Random gifs
+
+@demo demo/index.html 
+-->
+
+<dom-module id="gipher-roulette">
+    <template>
+        <style>
+            :host {
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                min-height: 100%;
+                min-width: 100%;
+            }
+       
+            
+          
+
+
+        </style>
+
+        <iron-ajax
+                   auto
+                   id="ajax"
+                   url="http://api.giphy.com/v1/gifs/random"
+                   params='{{params}}'
+                   handle-as="json"
+                   on-response="handleResponse"
+                   debounce-duration="300"></iron-ajax>
+
+        <img id="gif_container" alt="{{caption}}" src="{{gif}}"/>
+
+    </template>
+
+    <script>
+        Polymer({
+
+            is: 'gipher-roulette',
+
+            properties: {
+                params:{
+                    type:Object,
+                    computed:"getParams(tags)"
+                },
+                tags:{
+                    type: String,
+                    value: ""
+                },
+                caption:{
+                    type:String,
+                    value:"first gif"
+                },
+                gif:{
+                    type:String,
+                    value:"loading.png"
+                }
+               
+                
+                
+            },
+
+
+            getParams:function(tags){
+                return {
+                    api_key:"dc6zaTOxFJmzC"
+                }
+            },
+            handleResponse:function(ev){
+                var res=ev.target.lastResponse;
+                if(res.meta.status!==200){
+                    return console.log(res);
+                }
+                var gif_path=res.data.image_original_url;
+                this.caption=res.data.caption!==""?res.data.caption: res.data.username;
+                this.gif=gif_path;
+              
+
+            },
+
+            ready:function(){
+                
+                  var elm = this;
+                var updateImage = function () {
+                     elm.$.gif_container.width=window.innerWidth;
+                 elm.$.gif_container.height=window.innerHeight;
+                }
+                
+                 window.onresize = function () {
+                    updateImage();
+                }
+
+               updateImage();
+            }
+
+        });
+    </script>
+</dom-module>

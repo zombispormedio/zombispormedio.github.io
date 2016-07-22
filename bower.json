@@ -1,23 +1,12 @@
 {
-  "name": "zombispormedio.github.io",
-  "homepage": "http://zombispormedio.github.io",
-  "authors": [
-    "Xavier Serrano <zombispormedio007@gmail.com>"
-  ],
-  "description": "Zombispormedio Main Page",
-  "main": "index.html",
-  "keywords": [
-    "presentation",
-    "about",
-    "page"
-  ],
-  "license": "MIT",
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ]
+  "name": "gipher-roulette",
+  "description": "Random gifs",
+  "main": "gipher-roulette.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0",
+    "iron-ajax": "PolymerElements/iron-ajax#^1.4.3",
+    "iron-image": "PolymerElements/iron-image#^1.2.3",
+    "paper-input": "PolymerElements/paper-input#^1.1.15"
+  },
+  "devDependencies": {}
 }
