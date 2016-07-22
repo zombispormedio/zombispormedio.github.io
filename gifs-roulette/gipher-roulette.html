@@ -19,9 +19,9 @@ Random gifs
                 min-height: 100%;
                 min-width: 100%;
             }
-       
-            
-          
+
+
+
 
 
         </style>
@@ -61,9 +61,9 @@ Random gifs
                     type:String,
                     value:"loading.png"
                 }
-               
-                
-                
+
+
+
             },
 
 
@@ -80,27 +80,34 @@ Random gifs
                 var gif_path=res.data.image_original_url.replace("http://", "https://");
                 this.caption=res.data.caption!==""?res.data.caption: res.data.username;
                 this.gif=gif_path;
-              
+                
+                this.update();
 
             },
-            
+
+            sendRequest:function(){
+                this.$.ajax.generateRequest();
+            },
+
             update:function(){
-                
+                this.async(function(){
+                    this.sendRequest();
+                }, 10000);
             },
 
             ready:function(){
-                
-                  var elm = this;
+
+                var elm = this;
                 var updateImage = function () {
-                     elm.$.gif_container.width=window.innerWidth;
-                 elm.$.gif_container.height=window.innerHeight;
+                    elm.$.gif_container.width=window.innerWidth;
+                    elm.$.gif_container.height=window.innerHeight;
                 }
-                
-                 window.onresize = function () {
+
+                window.onresize = function () {
                     updateImage();
                 }
 
-               updateImage();
+                updateImage();
             }
 
         });
