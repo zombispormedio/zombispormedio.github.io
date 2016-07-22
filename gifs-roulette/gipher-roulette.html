@@ -27,7 +27,7 @@ Random gifs
         </style>
 
         <iron-ajax
-                   auto
+                    auto
                    id="ajax"
                    url="https://api.giphy.com/v1/gifs/random"
                    params='{{params}}'
@@ -60,17 +60,21 @@ Random gifs
                 gif:{
                     type:String,
                     value:"loading.png"
-                }
+                },
+
 
 
 
             },
 
-
             getParams:function(tags){
-                return {
+                var obj={
                     api_key:"dc6zaTOxFJmzC"
-                }
+                };
+
+                if(tags!=="")obj.tag=tags.replace(", ", "+");
+
+                return obj;
             },
             handleResponse:function(ev){
                 var res=ev.target.lastResponse;
@@ -80,18 +84,19 @@ Random gifs
                 var gif_path=res.data.image_original_url.replace("http://", "https://");
                 this.caption=res.data.caption!==""?res.data.caption: res.data.username;
                 this.gif=gif_path;
-                
                 this.update();
 
             },
 
             sendRequest:function(){
                 this.$.ajax.generateRequest();
+
             },
 
             update:function(){
                 this.async(function(){
                     this.sendRequest();
+
                 }, 10000);
             },
 
@@ -108,6 +113,9 @@ Random gifs
                 }
 
                 updateImage();
+
+               
+
             }
 
         });
