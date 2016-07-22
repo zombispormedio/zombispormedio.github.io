@@ -77,11 +77,15 @@ Random gifs
                 if(res.meta.status!==200){
                     return console.log(res);
                 }
-                var gif_path=res.data.image_original_url;
+                var gif_path=res.data.image_original_url.repace("http://", "https://");
                 this.caption=res.data.caption!==""?res.data.caption: res.data.username;
                 this.gif=gif_path;
               
 
+            },
+            
+            update:function(){
+                
             },
 
             ready:function(){
