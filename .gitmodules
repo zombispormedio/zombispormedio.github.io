@@ -1,0 +1,9 @@
+[submodule "bookshelf/themes/hugo-material-docs"]
+	path = bookshelf/themes/hugo-material-docs
+	url = ../../digitalcraftsman/hugo-material-docs.git
+[submodule "bookshelf/themes/hugo_theme_robust"]
+	path = bookshelf/themes/hugo_theme_robust
+	url = ../../dim0627/hugo_theme_robust.git
+[submodule "bookshelf/themes/vec"]
+	path = bookshelf/themes/vec
+	url = ../../IvanChou/hugo-theme-vec
