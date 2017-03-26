@@ -1,7 +1,0 @@
-baseurl = "http://zombispormedio.github.io/bookshelf"
-languageCode = "en-us"
-title = "Assemble"
-
-[Params]
-  Author="Zombispormedio"
-  disqusShortname = "Zombispormedio"
