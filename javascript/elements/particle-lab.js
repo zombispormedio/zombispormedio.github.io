@@ -3,7 +3,7 @@ import 'particles.js'
 const data = {
     "particles": {
         "number": {
-            "value": 400,
+            "value": 200,
             "density": {
                 "enable": true,
                 "value_area": 325
@@ -47,7 +47,7 @@ const data = {
         },
         "move": {
             "enable": true,
-            "speed": 1,
+            "speed": 3,
             "direction": "top",
             "random": true,
             "straight": false,
