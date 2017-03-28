@@ -28,6 +28,5 @@ repository: "Zombispormedio/zombispormedio.github.io"
 markdown: kramdown
 gems:
   - jekyll-feed
-exclude:
-  - Gemfile
-  - Gemfile.lock
+exclude: ['node_modules', '_site', 'javascript', 'Gemfile', 'Gemfile.lock', 'package.json', 'rs.bat', 'webpack.config.js', 'yarn.lock']
+
