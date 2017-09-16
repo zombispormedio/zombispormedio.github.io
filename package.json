@@ -1,0 +1,12 @@
+{
+  "name": "zombispormedio.github.io",
+  "version": "0.0.1",
+  "description": "Personal website's Xavier Serrano (@Zombipormedio)",
+  "main": "index.js",
+  "repository": "https://github.com/Zombispormedio/zombispormedio.github.io.git",
+  "author": "Xavier Serrano <zombispormedio007@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gatsby-cli": "^1.1.6"
+  }
+}
