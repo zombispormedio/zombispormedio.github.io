@@ -1,16 +1,36 @@
 {
   "assetsByChunkName": {
+    "path---about-glamor": [
+      "path---about-glamor-a0e39f21c11f6a62c5ab.js",
+      "path---about-glamor-a0e39f21c11f6a62c5ab.js.map"
+    ],
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-f642f58557fa6c0e1d00.js",
-      "component---src-pages-index-js-f642f58557fa6c0e1d00.js.map"
+      "component---src-pages-index-js-6149c3c41aef45ce0654.js",
+      "component---src-pages-index-js-6149c3c41aef45ce0654.js.map"
+    ],
+    "path---": [
+      "path----557518bd178906f8d58a.js",
+      "path----557518bd178906f8d58a.js.map"
     ],
     "path---counter": [
       "path---counter-a0e39f21c11f6a62c5ab.js",
       "path---counter-a0e39f21c11f6a62c5ab.js.map"
     ],
+    "component---src-pages-contact-js": [
+      "component---src-pages-contact-js-78f7b4d29678c592c14b.js",
+      "component---src-pages-contact-js-78f7b4d29678c592c14b.js.map"
+    ],
     "component---src-pages-counter-js": [
-      "component---src-pages-counter-js-23c7aeb642ce419df7f8.js",
-      "component---src-pages-counter-js-23c7aeb642ce419df7f8.js.map"
+      "component---src-pages-counter-js-a85367006aaf3f51e915.js",
+      "component---src-pages-counter-js-a85367006aaf3f51e915.js.map"
+    ],
+    "component---src-layouts-index-js": [
+      "component---src-layouts-index-js-c2620cdd016ffdf5d2b5.js",
+      "component---src-layouts-index-js-c2620cdd016ffdf5d2b5.js.map"
+    ],
+    "path---about-css-modules": [
+      "path---about-css-modules-a0e39f21c11f6a62c5ab.js",
+      "path---about-css-modules-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---page-2": [
       "path---page-2-a0e39f21c11f6a62c5ab.js",
@@ -20,17 +40,49 @@
       "path---index-a0e39f21c11f6a62c5ab.js",
       "path---index-a0e39f21c11f6a62c5ab.js.map"
     ],
+    "component---src-pages-about-css-modules-js": [
+      "component---src-pages-about-css-modules-js-2bf1ecca2576f6973c74.js",
+      "component---src-pages-about-css-modules-js-2bf1ecca2576f6973c74.js.map"
+    ],
     "commons": [
-      "commons-a706efda9882e3aecc8c.js",
-      "commons-a706efda9882e3aecc8c.js.map"
+      "commons-658b28d826986a2bbdaa.js",
+      "build-js-styles.css",
+      "commons-658b28d826986a2bbdaa.js.map",
+      "build-js-styles.css.map"
+    ],
+    "path---contact": [
+      "path---contact-a0e39f21c11f6a62c5ab.js",
+      "path---contact-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-pages-about-glamor-js": [
+      "component---src-pages-about-glamor-js-47f007de544e4ca2cc57.js",
+      "component---src-pages-about-glamor-js-47f007de544e4ca2cc57.js.map"
+    ],
+    "path---about-styled-components": [
+      "path---about-styled-components-a0e39f21c11f6a62c5ab.js",
+      "path---about-styled-components-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-pages-about-styled-components-js": [
+      "component---src-pages-about-styled-components-js-ae57291d998a84f745bd.js",
+      "component---src-pages-about-styled-components-js-ae57291d998a84f745bd.js.map"
     ],
     "component---src-pages-page-2-js": [
-      "component---src-pages-page-2-js-1122cfda08a2c6f40a54.js",
-      "component---src-pages-page-2-js-1122cfda08a2c6f40a54.js.map"
+      "component---src-pages-page-2-js-c9d58a584bade58451cd.js",
+      "component---src-pages-page-2-js-c9d58a584bade58451cd.js.map"
     ],
     "app": [
-      "app-c001523bb874df1ae0d5.js",
-      "app-c001523bb874df1ae0d5.js.map"
+      "app-e67121799ed9926c3a57.js",
+      "build-js-styles.css",
+      "app-e67121799ed9926c3a57.js.map",
+      "build-js-styles.css.map"
+    ],
+    "component---src-pages-about-js": [
+      "component---src-pages-about-js-2e02e6d3775a7d31eeb9.js",
+      "component---src-pages-about-js-2e02e6d3775a7d31eeb9.js.map"
+    ],
+    "path---about": [
+      "path---about-a0e39f21c11f6a62c5ab.js",
+      "path---about-a0e39f21c11f6a62c5ab.js.map"
     ]
   }
 }
