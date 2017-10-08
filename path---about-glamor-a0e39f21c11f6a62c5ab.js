@@ -1,2 +1,2 @@
-webpackJsonp([0xc89bf40a34c],{"./node_modules/json-loader/index.js!./.cache/json/about-glamor.json":function(o,n){o.exports={pathContext:{}}}});
+webpackJsonp([0xc89bf40a34c],{563:function(t,c){t.exports={pathContext:{}}}});
 //# sourceMappingURL=path---about-glamor-a0e39f21c11f6a62c5ab.js.map
