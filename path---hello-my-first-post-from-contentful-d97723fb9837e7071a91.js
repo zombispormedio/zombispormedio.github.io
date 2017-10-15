@@ -1,0 +1,2 @@
+webpackJsonp([0x5f9c6576400f],{575:function(t,o){t.exports={data:{contentfulPost:{title:"Hello my first post from contentful",content:"Okay, it's cool"}},pathContext:{slug:"hello-my-first-post-from-contentful"}}}});
+//# sourceMappingURL=path---hello-my-first-post-from-contentful-d97723fb9837e7071a91.js.map
