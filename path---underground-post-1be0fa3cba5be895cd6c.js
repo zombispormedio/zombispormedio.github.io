@@ -1,2 +1,0 @@
-webpackJsonp([0x7686f0444066],{583:function(t,e){t.exports={data:{markdownRemark:{html:"<p>The Basement</p>",frontmatter:{title:"Underground Post"}}},pathContext:{slug:"/underground-post"}}}});
-//# sourceMappingURL=path---underground-post-1be0fa3cba5be895cd6c.js.map
