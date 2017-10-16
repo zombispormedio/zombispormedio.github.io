@@ -1,0 +1,2 @@
+webpackJsonp([0xc6c285f8fd10],{392:function(e,t,l){(function(n){"use strict";function u(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var c=l(2),o=(u(c),l(125)),a=u(o);t.default=function(){return n.createElement("div",null,n.createElement("p",null," Hello world from my second page "),n.createElement(a.default,{to:"/"},"back home"))},e.exports=t.default}).call(t,l(13))}});
+//# sourceMappingURL=component---src-pages-page-2-js-fb1f18ae1c268f8cd107.js.map
