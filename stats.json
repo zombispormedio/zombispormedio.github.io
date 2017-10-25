@@ -103,12 +103,12 @@
       "path---about-styled-components-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-pages-about-styled-components-js": [
-      "component---src-pages-about-styled-components-js-8fa83dfb7519d9157ca8.js",
-      "component---src-pages-about-styled-components-js-8fa83dfb7519d9157ca8.js.map"
+      "component---src-pages-about-styled-components-js-72e4e3baf28c9729c9be.js",
+      "component---src-pages-about-styled-components-js-72e4e3baf28c9729c9be.js.map"
     ],
     "path---my-posts": [
-      "path---my-posts-eac03b589d42ee6d86b5.js",
-      "path---my-posts-eac03b589d42ee6d86b5.js.map"
+      "path---my-posts-a379e1a4f4ba3898b28e.js",
+      "path---my-posts-a379e1a4f4ba3898b28e.js.map"
     ],
     "component---src-pages-page-2-js": [
       "component---src-pages-page-2-js-fb1f18ae1c268f8cd107.js",
@@ -119,9 +119,9 @@
       "path---sweet-pandas-eating-sweets-7ae481abe72bc88b7d59.js.map"
     ],
     "app": [
-      "app-31af2ec71e4ace828d75.js",
+      "app-7cfd3e76372f00d345d0.js",
       "build-js-styles.css",
-      "app-31af2ec71e4ace828d75.js.map",
+      "app-7cfd3e76372f00d345d0.js.map",
       "build-js-styles.css.map"
     ],
     "path---about-pandas": [
@@ -131,6 +131,10 @@
     "path---about-this": [
       "path---about-this-a0e39f21c11f6a62c5ab.js",
       "path---about-this-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---welcome-to-the-palace": [
+      "path---welcome-to-the-palace-966737a7990e741af169.js",
+      "path---welcome-to-the-palace-966737a7990e741af169.js.map"
     ],
     "component---src-pages-about-js": [
       "component---src-pages-about-js-351d3fe954f486755a62.js",
