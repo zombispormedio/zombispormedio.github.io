@@ -1,0 +1,2 @@
+webpackJsonp([60335399758886],{97:function(t,e){t.exports={data:{site:{siteMetadata:{title:"Xavier Serrano - Full-Stack 🖥️ Mobile 📱 IoT & Whatever 💡"}}},layoutContext:{}}}});
+//# sourceMappingURL=path----149b8db46712a50bc988.js.map
