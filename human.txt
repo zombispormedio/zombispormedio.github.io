@@ -1,0 +1,15 @@
+/* TEAM */
+Creator: Xavier Serrano
+Site: https://github.com/Zombispormedio
+Twitter: @Zombispormedio
+Location: Alicante, Spain    
+							
+/* THANKS */
+Organizations: Alicante Frontend, Linkedin, Twitter 
+                            
+/* SITE */
+Last update: 2018/09/02       
+Standards: HTML5, CSS3, JavaScript, XML, YML, JSON
+Components: Gatsbyjs, Emotion.sh, React, React Helment, GraphQL
+Software: VS Code, GitHub
+Language: English
