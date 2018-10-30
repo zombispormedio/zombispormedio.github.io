@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{158:function(e,n,t){"use strict";t.r(n);var a=t(0),l=t.n(a),r=t(162);n.default=function(){return l.a.createElement(a.Fragment,null,l.a.createElement(r.f,null),l.a.createElement("h1",null,"Writings"),l.a.createElement("p",null,"This site is still under contruction"," ",l.a.createElement("span",{role:"img","aria-label":"enforced emoji"},"💪😛🤳")),l.a.createElement("p",null,"Some updates soon"))}}}]);
-//# sourceMappingURL=component---src-pages-writings-js-4ae0a861f917e323c6d2.js.map
