@@ -29,18 +29,18 @@ self.__precacheManifest = [
     "url": "webpack-runtime-f11ea79caf1bc8fe99e6.js"
   },
   {
-    "url": "app-1912aef9d12fea1a69ef.js"
+    "url": "app-fa11bfeef4bd7eb82e0f.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-951c94d1e5fb61e015b2.js"
   },
   {
     "url": "index.html",
-    "revision": "472c1bd039016b072c6bd6f4c3571031"
+    "revision": "87d641c1ed2f42702217bfd1e83b122a"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "040f3e6fa5444e2dfe234dd48bae51ec"
+    "revision": "0ef0528001e6bc7cb6c2b785869f07e3"
   },
   {
     "url": "0-8fe5002c834acabda68f.js"
@@ -81,6 +81,8 @@ workbox.routing.registerNavigationRoute("/offline-plugin-app-shell-fallback/inde
 
 workbox.routing.registerRoute(/\.(?:png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/, workbox.strategies.staleWhileRevalidate(), 'GET');
 workbox.routing.registerRoute(/^https:/, workbox.strategies.networkFirst(), 'GET');
+
+workbox.googleAnalytics.initialize({});
 "use strict";
 
 /* global workbox */
