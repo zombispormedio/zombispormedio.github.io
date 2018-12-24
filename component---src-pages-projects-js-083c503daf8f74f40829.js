@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{155:function(e,n,t){"use strict";t.r(n);var a=t(0),l=t.n(a),r=t(162);n.default=function(){return l.a.createElement(a.Fragment,null,l.a.createElement(r.b,null),l.a.createElement("h1",null,"Projects"),l.a.createElement("p",null,"This site is still under contruction"," ",l.a.createElement("span",{role:"img","aria-label":"enforced emoji"},"💪😛🤳")),l.a.createElement("p",null,"Some updates soon"))}}}]);
-//# sourceMappingURL=component---src-pages-projects-js-083c503daf8f74f40829.js.map
