@@ -2,6 +2,10 @@
   displayName: Summary
   activated: true
   path: /summary
+- id: react-hooked-on-a-feeling
+  displayName: React Hooked on a Feeling
+  activated: true
+  path: /react-hooked-on-a-feeling
 - id: faq
   displayName: F.A.Q.
   activated: false
