@@ -1,0 +1,16 @@
+- id: summary
+  displayName: Summary
+  activated: true
+  path: /summary
+- id: faq
+  displayName: F.A.Q.
+  activated: false
+  path: /faq
+- id: projects
+  displayName: Projects
+  activated: false
+  path: /projects
+- id: writings
+  displayName: Writings
+  activated: false
+  path: /writings
