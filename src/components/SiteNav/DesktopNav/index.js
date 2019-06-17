@@ -21,13 +21,25 @@ const NavItem = styled(Link)`
   padding: 1rem;
 `;
 
+const ExternalNavItem = styled.a`
+  font-size: 1.05rem;
+  font-weight: 500;
+  padding: 1rem;
+`;
+
 const DesktopNav = ({ items, ...restOfProps }) => (
   <NavList {...restOfProps}>
-    {items.map(({ id, displayName, path }) => (
-      <NavItem key={id} to={path}>
-        {displayName}
-      </NavItem>
-    ))}
+    {items.map(({ id, displayName, path, external }) =>
+      external ? (
+        <ExternalNavItem key={id} href={path}>
+          {displayName}
+        </ExternalNavItem>
+      ) : (
+        <NavItem key={id} to={path}>
+          {displayName}
+        </NavItem>
+      )
+    )}
   </NavList>
 );
 

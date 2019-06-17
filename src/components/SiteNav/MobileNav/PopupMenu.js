@@ -40,6 +40,17 @@ const PopupLinkItem = styled(Link)`
   }
 `;
 
+const PopupExternalLinkItem = styled.a`
+  font-size: 1.05rem;
+  font-weight: 500;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+`;
+
 class PopupMenu extends Component {
   handleClickOutside = () => {
     const { onClose } = this.props;
@@ -57,11 +68,17 @@ class PopupMenu extends Component {
           onClick={onClose}
         />
         <PopupLinksContainer>
-          {items.map(({ id, displayName, path }) => (
-            <PopupLinkItem key={id} to={path}>
-              {displayName}
-            </PopupLinkItem>
-          ))}
+          {items.map(({ id, displayName, path, external }) =>
+            external ? (
+              <PopupExternalLinkItem key={id} href={path}>
+                {displayName}
+              </PopupExternalLinkItem>
+            ) : (
+              <PopupLinkItem key={id} to={path}>
+                {displayName}
+              </PopupLinkItem>
+            )
+          )}
         </PopupLinksContainer>
       </PopupMenuContainer>
     );

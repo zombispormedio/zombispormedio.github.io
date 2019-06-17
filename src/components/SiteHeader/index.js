@@ -23,6 +23,7 @@ export const SiteHeader = () => (
                 id
                 displayName
                 path
+                external
               }
             }
           }
