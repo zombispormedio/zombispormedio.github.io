@@ -62,7 +62,7 @@
         "Contributed to services aimed to integrate all company products, like single sign-on, i18n and organizational structures management, using technologies like Node.js, React, GraphQL, MongoDB and Neo4j.",
         "Effectively implemented with my team the first CQRS architecture in the company using Kafka.",
         "Gave several React trainings.",
-        "Build a system to manage and monitor IoT assets related to water resources management, including an analytics system built with Spark and Airflow."
+        "Build a ambitious system to manage and monitor IoT assets related to water resources management with tech stack including React, Node.js, MongoDB, Kafka, ElasticSearch, Spark and Airflow."
       ]
     },
     {
