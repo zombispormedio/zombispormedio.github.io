@@ -52,6 +52,15 @@ const config: GatsbyConfig = {
       },
       __key: "images",
     },
+
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-PZ5B65L",
+        enableWebVitalsTracking: true,
+      },
+    },
+    "gatsby-plugin-offline",
   ],
 };
 
