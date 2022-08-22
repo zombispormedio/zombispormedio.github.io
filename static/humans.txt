@@ -8,8 +8,8 @@ Location: Alicante, Spain
 Organizations: Alicante Frontend, Linkedin, Twitter 
                             
 /* SITE */
-Last update: 2018/09/02       
-Standards: HTML5, CSS3, JavaScript, XML, YML, JSON
-Components: Gatsbyjs, Emotion.sh, React, React Helment, GraphQL
+Last update: 2022/08/22      
+Standards: HTML5, CSS3, JavaScript
+Components: Gatsbyjs, React
 Software: VS Code, GitHub
 Language: English

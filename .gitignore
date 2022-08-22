@@ -10,3 +10,5 @@ yarn.lock
 
 .env
 npm-debug.log
+
+src/gatsby-types.d.ts
