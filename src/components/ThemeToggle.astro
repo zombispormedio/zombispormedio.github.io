@@ -1,0 +1,32 @@
+<button
+  class="group inline-flex h-10 items-center gap-2 rounded-lg border border-amber-600/40 bg-amber-500/10 px-3 text-xs font-semibold uppercase tracking-[0.2em] text-amber-200 transition hover:border-amber-500 hover:bg-amber-500/20 hover:text-amber-100"
+  type="button"
+  aria-label="Toggle dark theme"
+  data-theme-toggle
+>
+  <span class="theme-icon" aria-hidden="true">◐</span>
+  <span>Theme</span>
+</button>
+
+<script is:inline>
+  const root = document.documentElement;
+  const button = document.querySelector("[data-theme-toggle]");
+  const storedTheme = localStorage.getItem("theme");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  const applyTheme = (theme) => {
+    if (theme === "dark") {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+  };
+
+  applyTheme(storedTheme ?? (prefersDark ? "dark" : "light"));
+
+  button?.addEventListener("click", () => {
+    const nextTheme = root.classList.contains("dark") ? "light" : "dark";
+    applyTheme(nextTheme);
+    localStorage.setItem("theme", nextTheme);
+  });
+</script>

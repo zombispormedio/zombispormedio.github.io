@@ -8,9 +8,30 @@ import "../styles/global.css";
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Xavier Serrano - Software Engineer</title>
+    <meta
+      name="description"
+      content="Personal website of Xavier Serrano, Senior Software Engineer focused on product and platform systems, Kubernetes, and developer experience."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script is:inline>
+      const storedTheme = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+      if (storedTheme === "dark" || (!storedTheme && prefersDark)) {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
+    <title>Xavier Serrano | Senior Software Engineer</title>
   </head>
-  <body>
+  <body
+    class="bg-amber-50 text-stone-900 antialiased dark:bg-stone-950 dark:text-stone-100"
+  >
     <slot />
   </body>
 </html>

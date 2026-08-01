@@ -1,7 +1,22 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import HeroSection from "../components/HeroSection.astro";
+import SkillsSection from "../components/SkillsSection.astro";
+import HobbiesSection from "../components/HobbiesSection.astro";
+import ExperienceSection from "../components/ExperienceSection.astro";
+import ProjectsSection from "../components/ProjectsSection.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
-  <h1>Xavier Serrano - Software Engineer</h1>
+  <Header />
+  <main>
+    <HeroSection />
+    <SkillsSection />
+    <HobbiesSection />
+    <ExperienceSection />
+    <ProjectsSection />
+  </main>
+  <Footer />
 </Layout>

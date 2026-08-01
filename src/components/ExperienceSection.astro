@@ -1,0 +1,107 @@
+---
+const experiences = [
+  {
+    role: "Senior Software Engineer (Platform Infrastructure)",
+    company: "[Redacted company - reach out for more information]",
+    date: "October 2023 - Present",
+    description: [
+      "Architecting CD systems and automation with Go, ArgoCD, and Argo Workflows for multi-cloud Kubernetes on AWS and Azure.",
+      "Leading mTLS and service mesh initiatives to strengthen security, traffic control, and observability across clusters.",
+      "Building internal tools with React and TypeScript while participating in production operations and incident response.",
+    ],
+    redacted: true,
+  },
+  {
+    role: "Full Stack Engineer",
+    company: "Trazable",
+    date: "March 2022 - October 2023",
+    description: [
+      "Developed SaaS capabilities for food supply chain traceability and quality assurance on microservices architecture.",
+      "Implemented engineering standards for OpenTelemetry observability and robust continuous delivery pipelines.",
+    ],
+  },
+  {
+    role: "Software Engineer, Site Reliability (SRE)",
+    company: "Lansweeper",
+    date: "April 2020 - February 2022",
+    description: [
+      "Led migration to GitOps delivery with ArgoCD to modernize deployment workflows and increase environment stability.",
+      "Transitioned observability stack to OpenTelemetry and Honeycomb.",
+      "Built operational services in Go and managed Kubernetes and Terraform infrastructure.",
+    ],
+  },
+  {
+    role: "Full Stack Engineer (Product)",
+    company: "Lansweeper",
+    date: "August 2019 - April 2020",
+    description: [
+      "Built inventory and identity management features with Node.js, TypeScript, and GraphQL.",
+    ],
+  },
+  {
+    role: "Full Stack Engineer",
+    company: "Suez",
+    date: "October 2017 - July 2019",
+    description: [
+      "Contributed to IoT asset management systems and enterprise applications using Java, Node.js, Kafka, and MongoDB.",
+    ],
+  },
+];
+---
+
+<section id="experience" class="mx-auto w-full max-w-6xl px-5 py-20 lg:px-8">
+  <h2 class="text-3xl font-bold text-stone-900 dark:text-amber-100">
+    Professional Experience
+  </h2>
+  <p
+    class="mt-3 max-w-3xl text-sm leading-7 text-stone-700 dark:text-stone-300"
+  >
+    Timeline of product and platform roles across software engineering,
+    reliability, and infrastructure.
+  </p>
+
+  <ol class="mt-10 border-l border-amber-600/40 pl-6">
+    {
+      experiences.map((item, idx) => (
+        <li
+          class={`animate-fade-up relative pb-8 ${idx % 2 === 1 ? "animate-delay-1" : ""}`}
+        >
+          <span class="absolute -left-7.5 top-1.5 h-3 w-3 rounded-full border border-amber-300 bg-amber-500" />
+          <details class="group rounded-xl border border-amber-600/30 bg-amber-50/70 p-4 open:bg-amber-50 dark:border-amber-500/20 dark:bg-stone-900/70 dark:open:bg-stone-900">
+            <summary class="cursor-pointer list-none">
+              <div class="flex flex-wrap items-center justify-between gap-3">
+                <div>
+                  <h3 class="text-base font-semibold text-stone-900 dark:text-amber-100">
+                    {item.role}
+                  </h3>
+                  <p class="text-sm text-stone-600 dark:text-stone-300">
+                    {item.company}
+                  </p>
+                </div>
+                <span class="rounded border border-amber-600/30 bg-white px-2 py-1 text-xs uppercase tracking-[0.15em] text-amber-700 dark:border-amber-500/30 dark:bg-stone-800 dark:text-amber-300">
+                  {item.date}
+                </span>
+              </div>
+            </summary>
+
+            {item.redacted && (
+              <p class="mt-4 rounded-lg border border-amber-500/35 bg-amber-500/10 p-3 text-sm leading-6 text-stone-700 dark:text-stone-200">
+                Company details are intentionally private for security reasons.
+                Reach out directly and I can decide what context I can share.
+              </p>
+            )}
+
+            <ul class="mt-4 grid gap-2">
+              {item.description.map((line) => (
+                <li class="flex gap-3 text-sm leading-7 text-stone-700 dark:text-stone-200">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
+                  <span>{line}</span>
+                </li>
+              ))}
+            </ul>
+          </details>
+        </li>
+      ))
+    }
+  </ol>
+</section>

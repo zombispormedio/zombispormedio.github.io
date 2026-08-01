@@ -1,0 +1,82 @@
+---
+const hobbies = [
+  {
+    name: "Hardware and Electronics",
+    icon: "⚡",
+    bar: "w-[92%]",
+    description:
+      "Designing and assembling practical hardware systems to understand the physical side of software.",
+  },
+  {
+    name: "Robotics",
+    icon: "🤖",
+    bar: "w-[86%]",
+    description:
+      "Exploring robotic workflows, intelligent hardware, and human-machine collaboration.",
+  },
+  {
+    name: "Making",
+    icon: "🛠",
+    bar: "w-[80%]",
+    description:
+      "Building prototypes fast, iterating by hand, and turning ideas into tangible experiments.",
+  },
+  {
+    name: "Comic Books and Manga",
+    icon: "📚",
+    bar: "w-[75%]",
+    description:
+      "Learning visual storytelling patterns and narrative structure from graphic worlds.",
+  },
+  {
+    name: "Traveling",
+    icon: "🧭",
+    bar: "w-[70%]",
+    description:
+      "Discovering new environments, people, and local cultures to expand perspective.",
+  },
+];
+---
+
+<section
+  id="hobbies"
+  class="border-y border-amber-700/30 bg-stone-950 px-5 py-20 lg:px-8 dark:bg-stone-950"
+>
+  <div class="mx-auto w-full max-w-6xl">
+    <h2 class="text-3xl font-bold text-amber-100">Hobbies Infography</h2>
+    <p class="mt-3 max-w-3xl text-sm leading-7 text-amber-100/80">
+      The curiosity map behind my work style. These interests feed how I design
+      products, systems, and experiences.
+    </p>
+
+    <div class="mt-10 grid gap-6 lg:grid-cols-2">
+      {
+        hobbies.map((hobby, idx) => (
+          <article
+            class={`animate-fade-up rounded-2xl border border-amber-500/25 bg-linear-to-br from-stone-900 to-stone-800 p-5 ${idx % 2 === 1 ? "animate-delay-1" : ""}`}
+          >
+            <div class="flex items-center justify-between gap-4">
+              <h3 class="text-base font-semibold text-amber-100">
+                <span class="mr-2" aria-hidden="true">
+                  {hobby.icon}
+                </span>
+                {hobby.name}
+              </h3>
+              <span class="text-[10px] uppercase tracking-[0.2em] text-amber-300/80">
+                Focus
+              </span>
+            </div>
+            <div class="mt-4 h-2 rounded-full bg-stone-700/80">
+              <div
+                class={`h-2 rounded-full bg-linear-to-r from-amber-500 to-amber-300 ${hobby.bar}`}
+              />
+            </div>
+            <p class="mt-4 text-sm leading-7 text-stone-200/90">
+              {hobby.description}
+            </p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

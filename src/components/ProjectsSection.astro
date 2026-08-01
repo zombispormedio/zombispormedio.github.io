@@ -1,0 +1,76 @@
+---
+const projects = [
+  {
+    name: "Physical Workers",
+    link: "https://physicalworkers.com/",
+    accent: "from-amber-200 via-amber-300 to-amber-500",
+    summary:
+      "Research lab and venture focused on bringing AI, digital twins, and robotics into physical work environments with intuitive, field-ready tools.",
+    highlights: [
+      "Targets sectors like agriculture, construction, and emergency response with real operational constraints.",
+      "Designs workflows around offline support, contextual assistance, and knowledge capture on the ground.",
+      "Built with a manifesto-first approach: practical UX, fast adoption, and technology that serves frontline teams.",
+    ],
+  },
+  {
+    name: "Stemkata",
+    link: "https://stemkata.com/",
+    accent: "from-amber-100 via-amber-300 to-orange-500",
+    summary:
+      "Local academy initiative to develop tech communities in smaller towns, helping kids, families, and professionals move from tech consumers to creators.",
+    highlights: [
+      "Training in robotics, hardware, programming, AI, cybersecurity, and practical digital skills.",
+      "Community-first model with in-person, accessible learning designed for local impact.",
+      "Focuses on long-term digital independence for both younger learners and adults.",
+    ],
+  },
+];
+---
+
+<section
+  id="projects"
+  class="border-y border-amber-700/30 bg-stone-950 px-5 py-20 lg:px-8 dark:bg-stone-950"
+>
+  <div class="mx-auto w-full max-w-6xl">
+    <h2 class="text-3xl font-bold text-amber-100">
+      Projects and Entrepreneurship
+    </h2>
+    <p class="mt-3 max-w-3xl text-sm leading-7 text-amber-100/80">
+      Independent ventures exploring applied AI, robotics, and education as
+      practical systems with social impact.
+    </p>
+
+    <div class="mt-10 grid gap-6 lg:grid-cols-5">
+      {
+        projects.map((project, index) => (
+          <article
+            class={`animate-fade-up rounded-2xl border border-amber-500/25 bg-linear-to-br p-6 ${project.accent} ${index === 0 ? "animate-delay-1 lg:col-span-3" : "animate-delay-2 lg:col-span-2"}`}
+          >
+            <h3 class="text-2xl font-bold text-stone-900">{project.name}</h3>
+            <p class="mt-3 text-sm leading-7 text-stone-800">
+              {project.summary}
+            </p>
+
+            <ul class="mt-5 grid gap-2">
+              {project.highlights.map((highlight) => (
+                <li class="flex gap-3 text-sm leading-7 text-stone-900">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-stone-900" />
+                  <span>{highlight}</span>
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noreferrer"
+              class="mt-6 inline-block rounded border border-stone-900/30 bg-stone-900 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-amber-100 transition hover:bg-stone-800"
+            >
+              Visit project
+            </a>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,87 @@
+---
+import avatar from "../images/avatar.jpg";
+
+const socialLinks = [
+  { label: "GitHub", href: "https://github.com/zombispormedio" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/xsedev/" },
+  { label: "X", href: "https://x.com/zombispormedio" },
+];
+
+const manifestoLines = [
+  "Proactive, Product and Platform.",
+  "I am the Kubernetes guy for product engineers and the React guy for platform engineers.",
+  "I\'m just as comfortable fixing a DNS issue or tweaking website styles as I am improving UX or tackling a world-class problem.",
+  "I speak to the agents with philosophy and discipline.",
+  "I\'m building up my hardware skills for what\'s coming next.",
+];
+---
+
+<section id="top" class="relative overflow-hidden border-b border-amber-700/30">
+  <div
+    class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_10%_20%,rgba(245,158,11,0.32),transparent_40%),radial-gradient(circle_at_80%_0%,rgba(217,119,6,0.28),transparent_32%),linear-gradient(180deg,#0c0a09_0%,#1c1917_100%)] dark:bg-[radial-gradient(circle_at_10%_20%,rgba(251,191,36,0.17),transparent_40%),radial-gradient(circle_at_80%_0%,rgba(180,83,9,0.2),transparent_32%),linear-gradient(180deg,#0a0a0a_0%,#171717_100%)]"
+  >
+  </div>
+  <div
+    class="mx-auto grid w-full max-w-6xl gap-12 px-5 py-16 lg:grid-cols-[1.3fr_0.8fr] lg:px-8 lg:py-24"
+  >
+    <div class="animate-fade-up">
+      <p
+        class="mb-5 inline-flex rounded border border-amber-500/35 bg-amber-500/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-amber-200"
+      >
+        Senior Software Engineer
+      </p>
+      <h1
+        class="max-w-2xl text-4xl font-bold leading-tight text-amber-50 sm:text-5xl lg:text-6xl"
+      >
+        Building Product x Platform Systems For Real-World Impact
+      </h1>
+      <p
+        class="mt-5 max-w-2xl text-sm leading-7 text-amber-100/85 dark:text-stone-200/85"
+      >
+        Senior engineer focused on high-availability platforms, practical user
+        experiences, and developer tooling that actually ships.
+      </p>
+
+      <ul class="mt-8 grid gap-3">
+        {
+          manifestoLines.map((line) => (
+            <li class="flex gap-3 text-sm leading-7 text-amber-100/90 dark:text-stone-200/85">
+              <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-amber-400" />
+              <span>{line}</span>
+            </li>
+          ))
+        }
+      </ul>
+
+      <div class="mt-9 flex flex-wrap gap-3">
+        {
+          socialLinks.map((social) => (
+            <a
+              href={social.href}
+              target="_blank"
+              rel="noreferrer"
+              class="rounded border border-amber-500/35 bg-amber-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-amber-100 transition hover:border-amber-400 hover:bg-amber-400/20"
+            >
+              {social.label}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <div
+      class="animate-fade-up animate-delay-2 self-start justify-self-center lg:justify-self-end"
+    >
+      <figure
+        class="relative w-64 max-w-full overflow-hidden rounded-2xl border border-amber-500/35 bg-stone-900 p-2 shadow-[0_0_0_1px_rgba(245,158,11,0.2),0_30px_80px_-45px_rgba(245,158,11,0.8)] dark:border-amber-500/25"
+      >
+        <img
+          src={avatar.src}
+          alt="Portrait of Xavier Serrano"
+          class="h-auto w-full rounded-xl object-cover"
+          loading="eager"
+        />
+      </figure>
+    </div>
+  </div>
+</section>
