@@ -19,13 +19,15 @@ import "../styles/global.css";
       rel="stylesheet"
     />
     <script is:inline>
-      const storedTheme = localStorage.getItem("theme");
-      const prefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)",
-      ).matches;
-      if (storedTheme === "dark" || (!storedTheme && prefersDark)) {
-        document.documentElement.classList.add("dark");
-      }
+      (() => {
+        const storedTheme = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+        if (storedTheme === "dark" || (!storedTheme && prefersDark)) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
     </script>
     <title>Xavier Serrano | Senior Software Engineer</title>
   </head>
