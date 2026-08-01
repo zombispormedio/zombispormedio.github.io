@@ -53,35 +53,27 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: "24"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v1
-        with:
-          # Automatically inject pathPrefix in your Gatsby configuration file.
-          #
-          # You may remove this line if you want to manage the configuration yourself.
-          static_site_generator: gatsby
       - name: Restore cache
         uses: actions/cache@v3
         with:
           path: |
-            public
-            .cache
-          key: ${{ runner.os }}-gatsby-build-${{ hashFiles('public') }}
+            dist
+            node_modules
+          key: ${{ runner.os }}-astro-build-${{ hashFiles('astro.config.mjs') }}
           restore-keys: |
-            ${{ runner.os }}-gatsby-build-
+            ${{ runner.os }}-astro-build-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-      - name: Build with Gatsby
+      - name: Build
         env:
           PREFIX_PATHS: 'true'
         run: ${{ steps.detect-package-manager.outputs.manager }} run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./public
+          path: ./dist
 
   # Deployment job
   deploy:

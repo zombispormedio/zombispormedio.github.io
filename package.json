@@ -1,77 +1,19 @@
 {
-  "name": "zombispormedio.github.io",
-  "description": "Software Engineer 🌍",
-  "homepage": "https://zombispormedio.github.io",
-  "version": "1.0.1",
-  "main": "src/pages/index.js",
-  "bin": {
-    "gatsby": "./bin/gatsby"
+  "name": "astro",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
   },
-  "author": {
-    "email": "zombispormedio007@gmail.com",
-    "name": "Xavier Serrano",
-    "url": "https://zombispormedio.github.io"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Zombispormedio/zombispormedio.github.io.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Zombispormedio/zombispormedio.github.io/issues"
-  },
-  "keywords": [
-    "android",
-    "data",
-    "full-stack developer",
-    "golang",
-    "java",
-    "javascript",
-    "software engineer",
-    "user experience"
-  ],
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit",
-    "format": "prettier --write **/*.js",
-    "lint": "eslint **/*.js"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.0",
-    "@emotion/styled": "^11.10.0",
-    "@mdi/js": "^7.0.96",
-    "gatsby": "^4.21.1",
-    "gatsby-plugin-emotion": "^7.21.0",
-    "gatsby-plugin-google-tagmanager": "^4.21.0",
-    "gatsby-plugin-image": "^2.21.0",
-    "gatsby-plugin-manifest": "^4.21.0",
-    "gatsby-plugin-offline": "^5.21.0",
-    "gatsby-plugin-sharp": "^4.21.0",
-    "gatsby-plugin-sitemap": "^5.21.0",
-    "gatsby-source-filesystem": "^4.21.1",
-    "gatsby-transformer-sharp": "^4.21.0",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0"
-  },
-  "devDependencies": {
-    "@types/node": "^17.0.45",
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
-    "@typescript-eslint/eslint-plugin": "^5.33.1",
-    "eslint": "^8.22.0",
-    "eslint-config-standard-with-typescript": "^22.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.2.5",
-    "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-react": "^7.30.1",
-    "prettier": "2.7.1",
-    "typescript": "^4.7.4"
-  },
-  "files": [
-    "public/*"
-  ],
-  "license": "MIT"
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.1.6",
+    "tailwindcss": "^4.3.3"
+  }
 }
