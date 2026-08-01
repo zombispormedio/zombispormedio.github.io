@@ -46,7 +46,33 @@ const experiences = [
       "Contributed to IoT asset management systems and enterprise applications using Java, Node.js, Kafka, and MongoDB.",
     ],
   },
+  {
+    role: "Android Developer",
+    company: "From The Bench",
+    date: "April 2017 - October 2017",
+    description: [],
+  },
+  {
+    role: "Android Developer",
+    company: "Cookpad",
+    date: "November 2016 - January 2017",
+    description: [],
+  },
+  {
+    role: "Full Stack Developer (Intern)",
+    company: "Sonneil",
+    date: "June 2015 - December 2015",
+    description: [],
+  },
 ];
+
+const hasExpandableContent = (experience: (typeof experiences)[number]) =>
+  experience.redacted || experience.description.length > 0;
+
+const initiallyVisibleExperiences = 5;
+const hasHiddenExperiences = experiences.length > initiallyVisibleExperiences;
+const redactedCompanyLabel = "Confidential company";
+const redactedBadgeLabel = "Private";
 ---
 
 <section id="experience" class="mx-auto w-full max-w-6xl px-5 py-20 lg:px-8">
@@ -65,10 +91,55 @@ const experiences = [
       experiences.map((item, idx) => (
         <li
           class={`animate-fade-up relative pb-8 ${idx % 2 === 1 ? "animate-delay-1" : ""}`}
+          data-extra-experience={
+            idx >= initiallyVisibleExperiences ? "true" : undefined
+          }
+          hidden={idx >= initiallyVisibleExperiences}
         >
           <span class="absolute -left-7.5 top-1.5 h-3 w-3 rounded-full border border-amber-300 bg-amber-500" />
-          <details class="group rounded-xl border border-amber-600/30 bg-amber-50/70 p-4 open:bg-amber-50 dark:border-amber-500/20 dark:bg-stone-900/70 dark:open:bg-stone-900">
-            <summary class="cursor-pointer list-none">
+          {hasExpandableContent(item) ? (
+            <details class="group rounded-xl border border-amber-600/30 bg-amber-50/70 p-4 open:bg-amber-50 dark:border-amber-500/20 dark:bg-stone-900/70 dark:open:bg-stone-900">
+              <summary class="cursor-pointer list-none">
+                <div class="flex flex-wrap items-center justify-between gap-3">
+                  <div>
+                    <h3 class="text-base font-semibold text-stone-900 dark:text-amber-100">
+                      {item.role}
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-2 text-sm text-stone-600 dark:text-stone-300">
+                      <p>
+                        {item.redacted ? redactedCompanyLabel : item.company}
+                      </p>
+                      {item.redacted && (
+                        <span class="rounded-full border border-amber-500/35 bg-amber-500/10 px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-amber-800 dark:border-amber-400/30 dark:bg-amber-400/10 dark:text-amber-200">
+                          {redactedBadgeLabel}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <span class="rounded border border-amber-600/30 bg-white px-2 py-1 text-xs uppercase tracking-[0.15em] text-amber-700 dark:border-amber-500/30 dark:bg-stone-800 dark:text-amber-300">
+                    {item.date}
+                  </span>
+                </div>
+              </summary>
+
+              {item.redacted && (
+                <p class="mt-4 rounded-lg border border-amber-500/35 bg-amber-500/10 p-3 text-sm leading-6 text-stone-700 dark:text-stone-200">
+                  Company identity is intentionally private. Reach out directly
+                  and I can decide what context I can share.
+                </p>
+              )}
+
+              <ul class="mt-4 grid gap-2">
+                {item.description.map((line) => (
+                  <li class="flex gap-3 text-sm leading-7 text-stone-700 dark:text-stone-200">
+                    <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
+                    <span>{line}</span>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          ) : (
+            <div class="rounded-xl border border-amber-600/30 bg-amber-50/70 p-4 dark:border-amber-500/20 dark:bg-stone-900/70">
               <div class="flex flex-wrap items-center justify-between gap-3">
                 <div>
                   <h3 class="text-base font-semibold text-stone-900 dark:text-amber-100">
@@ -82,26 +153,51 @@ const experiences = [
                   {item.date}
                 </span>
               </div>
-            </summary>
-
-            {item.redacted && (
-              <p class="mt-4 rounded-lg border border-amber-500/35 bg-amber-500/10 p-3 text-sm leading-6 text-stone-700 dark:text-stone-200">
-                Company details are intentionally private for security reasons.
-                Reach out directly and I can decide what context I can share.
-              </p>
-            )}
-
-            <ul class="mt-4 grid gap-2">
-              {item.description.map((line) => (
-                <li class="flex gap-3 text-sm leading-7 text-stone-700 dark:text-stone-200">
-                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
-                  <span>{line}</span>
-                </li>
-              ))}
-            </ul>
-          </details>
+            </div>
+          )}
         </li>
       ))
     }
   </ol>
+
+  {
+    hasHiddenExperiences && (
+      <div class="mt-8 flex justify-start pl-6">
+        <button
+          id="show-more-experiences"
+          type="button"
+          class="rounded-full border border-amber-600/40 bg-amber-100 px-4 py-2 text-sm font-medium text-amber-900 transition hover:border-amber-700 hover:bg-amber-200 dark:border-amber-500/30 dark:bg-stone-900 dark:text-amber-200 dark:hover:border-amber-400 dark:hover:bg-stone-800"
+          aria-expanded="false"
+        >
+          Show more experience
+        </button>
+      </div>
+    )
+  }
 </section>
+
+<script is:inline>
+  const showMoreExperiencesButton = document.querySelector(
+    "#show-more-experiences",
+  );
+  const extraExperiences = document.querySelectorAll(
+    '[data-extra-experience="true"]',
+  );
+
+  showMoreExperiencesButton?.addEventListener("click", () => {
+    const isExpanded =
+      showMoreExperiencesButton.getAttribute("aria-expanded") === "true";
+
+    extraExperiences.forEach((item) => {
+      item.hidden = isExpanded;
+    });
+
+    showMoreExperiencesButton.setAttribute(
+      "aria-expanded",
+      isExpanded ? "false" : "true",
+    );
+    showMoreExperiencesButton.textContent = isExpanded
+      ? "Show more experience"
+      : "Show less experience";
+  });
+</script>
