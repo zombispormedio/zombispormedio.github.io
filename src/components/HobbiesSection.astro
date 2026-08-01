@@ -1,39 +1,40 @@
 ---
 const hobbies = [
   {
-    name: "Hardware and Electronics",
-    icon: "⚡",
-    bar: "w-[92%]",
+    name: "Making, Hardware & Electronics",
+    icon: "🛠️",
     description:
-      "Designing and assembling practical hardware systems to understand the physical side of software.",
+      "Exploring the world of 3D printing, circuits, microcontrollers, and embedded systems to create innovative hardware and electronic devices.",
   },
   {
     name: "Robotics",
     icon: "🤖",
-    bar: "w-[86%]",
     description:
       "Exploring robotic workflows, intelligent hardware, and human-machine collaboration.",
   },
   {
-    name: "Making",
-    icon: "🛠",
-    bar: "w-[80%]",
-    description:
-      "Building prototypes fast, iterating by hand, and turning ideas into tangible experiments.",
-  },
-  {
-    name: "Comic Books and Manga",
+    name: "Books, Comic Books & Manga",
     icon: "📚",
-    bar: "w-[75%]",
     description:
-      "Learning visual storytelling patterns and narrative structure from graphic worlds.",
+      "Diving into stories, ideas, and knowledge through various literary forms to expand imagination and understanding. ",
   },
   {
     name: "Traveling",
     icon: "🧭",
-    bar: "w-[70%]",
     description:
       "Discovering new environments, people, and local cultures to expand perspective.",
+  },
+  {
+    name: "Cooking",
+    icon: "🍳",
+    description:
+      "Experimenting with recipes, flavors, and cooking techniques to create delicious meals.",
+  },
+  {
+    name: "Fitness, Health & Wellness",
+    icon: "🏋️‍♂️",
+    description:
+      "Maintaining physical fitness, mental well-being, and a balanced lifestyle.",
   },
 ];
 ---
@@ -55,20 +56,16 @@ const hobbies = [
           <article
             class={`animate-fade-up rounded-2xl border border-amber-500/25 bg-linear-to-br from-stone-900 to-stone-800 p-5 ${idx % 2 === 1 ? "animate-delay-1" : ""}`}
           >
-            <div class="flex items-center justify-between gap-4">
-              <h3 class="text-base font-semibold text-amber-100">
-                <span class="mr-2" aria-hidden="true">
-                  {hobby.icon}
-                </span>
-                {hobby.name}
-              </h3>
-              <span class="text-[10px] uppercase tracking-[0.2em] text-amber-300/80">
-                Focus
+            <h3 class="text-base font-semibold text-amber-100">
+              <span class="mr-2" aria-hidden="true">
+                {hobby.icon}
               </span>
-            </div>
+              {hobby.name}
+            </h3>
+
             <div class="mt-4 h-2 rounded-full bg-stone-700/80">
               <div
-                class={`h-2 rounded-full bg-linear-to-r from-amber-500 to-amber-300 ${hobby.bar}`}
+                class={`h-2 rounded-full bg-linear-to-r from-amber-500 to-amber-300 w-full`}
               />
             </div>
             <p class="mt-4 text-sm leading-7 text-stone-200/90">
