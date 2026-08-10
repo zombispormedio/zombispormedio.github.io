@@ -1,0 +1,251 @@
+---
+const talks = [
+  {
+    name: "Cómo casarse con Next.js",
+    date: "April 2025",
+    group: "Alicante Frontend",
+    event: null,
+    eventType: "meetup",
+    language: "Spanish",
+    description:
+      "A candid, behind-the-scenes account of building a full wedding RSVP system with Next.js and Airtable. Goes well beyond a tutorial by showing how a modern full-stack app can tackle real logistics—RSVPs, dietary restrictions, seating charts, companion tracking, and last-minute changes—without any dedicated backend infrastructure. Demonstrates Next.js API routes, server-side rendering, and Airtable as a human-friendly, schema-flexible database that non-engineers can operate. A story of pragmatic tech choices under deadline pressure and genuine emotional stakes.",
+    link: "https://www.meetup.com/es-es/alicante-frontend/events/307288133/",
+    topics: ["Next.js", "React", "Airtable"],
+    video: null,
+    slides: null,
+  },
+  {
+    name: "Believe in Ops | DevOps 101",
+    date: "June 2023",
+    group: "Alicante Frontend",
+    event: null,
+    eventType: "meetup",
+    language: "English",
+    description:
+      "A ground-up introduction to DevOps culture and what genuinely separates high-performing engineering teams from struggling ones. Examines the full engineering feedback loop from commit to production and dissects common dysfunction: alert fatigue, broken on-call rotations, fragile deployments, and diffuse ownership. Argues for a culture of awareness, accountability, and shared responsibility—where testing in production is a deliberate practice, not a mistake. Closes with a practical overview of observability foundations, incident response workflows, and disaster recovery thinking as first-class engineering disciplines.",
+    link: "https://www.meetup.com/es-es/alicante-frontend/events/293178200",
+    topics: ["DevOps", "SRE", "Observability", "Incident Response"],
+    video: null,
+    slides: null,
+  },
+  {
+    name: "Observability in Frontend: React ❤️ OpenTelemetry",
+    date: "September 2022",
+    group: null,
+    event: "React Alicante",
+    eventType: "conference",
+    language: "English",
+    description:
+      "A deep dive into bringing production-grade observability to the frontend. Introduces OpenTelemetry—the emerging open standard for distributed tracing, metrics, and logs—and walks through integrating its JavaScript SDK into a React application from scratch. Shows how to instrument user interactions, capture HTTP request spans across service boundaries, and wire the React app into the same observability pipelines used by backend services, enabling genuine end-to-end distributed tracing. Challenges the assumption that observability is a backend concern and makes the case for treating the browser as a first-class node in the trace graph.",
+    link: "https://reactalicante.es/talks",
+    topics: ["React", "OpenTelemetry", "Observability"],
+    video: "ZmgaBMbfVVg",
+    slides: "https://xavierserrano.dev/observability-in-frontend",
+  },
+  {
+    name: "React Hooked on a Feeling",
+    date: "June 2019",
+    group: "Alicante Frontend",
+    event: null,
+    eventType: "meetup",
+    language: "Spanish",
+    description:
+      "An exploration of React Hooks at the moment they were reshaping the entire ecosystem. Unpacks why hooks were introduced, what fundamental problems they solve over class components, and how to build the right mental model for useState, useEffect, useRef, and custom hooks. Goes beyond the API surface to examine the design philosophy: colocation of logic, composability over inheritance, and the end of lifecycle-driven thinking. Discusses how hooks would—and did—define the future of component-driven development, and why the shift matters even for developers coming from other frameworks.",
+    link: "https://www.meetup.com/es-es/alicante-frontend/events/262058654",
+    topics: ["React"],
+    video: null,
+    slides: "https://xavierserrano.dev/react-hooked-on-a-feeling/#/",
+    notEmbeddable: true,
+  },
+];
+
+const eventTypeLabels: Record<string, string> = {
+  meetup: "Meetup",
+  conference: "Conference",
+};
+---
+
+<section
+  id="talks"
+  class="border-b border-amber-700/30 bg-stone-950 px-5 py-20 lg:px-8"
+>
+  <div class="mx-auto w-full max-w-6xl">
+    <h2 class="text-3xl font-bold text-amber-100">Talks & Presentations</h2>
+    <p class="mt-3 max-w-3xl text-sm leading-7 text-amber-100/70">
+      Conference talks and meetup presentations on frontend engineering,
+      observability, and engineering culture.
+    </p>
+
+    <ol class="mt-10 border-l border-amber-500/50 pl-6">
+      {
+        talks.map((talk, idx) => (
+          <li
+            class={`animate-fade-up relative pb-8 last:pb-0 ${idx % 2 === 1 ? "animate-delay-1" : ""}`}
+          >
+            <span class="absolute left-[-0.4rem] top-[0.4rem] h-3 w-3 rotate-45 border border-amber-400/60 bg-amber-500/80" />
+
+            <details class="group rounded-xl border border-amber-500/20 bg-stone-900/80 p-4 open:border-amber-500/40 open:bg-stone-900">
+              <summary class="cursor-pointer list-none">
+                <div class="flex flex-wrap items-start justify-between gap-3">
+                  <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2">
+                      <h3 class="text-base font-semibold text-amber-100">
+                        {talk.name}
+                      </h3>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        class="h-4 w-4 shrink-0 text-amber-500/60 transition-transform duration-200 group-open:rotate-180"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+
+                    <div class="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-stone-400">
+                      {talk.group && <span>{talk.group}</span>}
+                      {talk.event && (
+                        <span class="font-medium text-amber-300/80">
+                          {talk.event}
+                        </span>
+                      )}
+                      {(talk.group || talk.event) && (
+                        <span class="text-stone-600" aria-hidden="true">
+                          ·
+                        </span>
+                      )}
+                      <span
+                        class={`inline-flex items-center rounded-full px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-[0.15em] ${
+                          talk.eventType === "conference"
+                            ? "border border-amber-400/40 bg-amber-400/10 text-amber-300"
+                            : "border border-stone-500/40 bg-stone-700/50 text-stone-300"
+                        }`}
+                      >
+                        {eventTypeLabels[talk.eventType] ?? talk.eventType}
+                      </span>
+                      {talk.language && (
+                        <span class="inline-flex items-center rounded-full border border-stone-600/40 bg-stone-800 px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-[0.15em] text-stone-400">
+                          {talk.language}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+
+                  <span class="shrink-0 rounded border border-amber-500/30 bg-stone-800 px-2 py-1 text-xs uppercase tracking-[0.15em] text-amber-400">
+                    {talk.date}
+                  </span>
+                </div>
+              </summary>
+
+              <div class="mt-5 border-t border-amber-500/10 pt-5">
+                <p class="text-sm leading-7 text-stone-300">
+                  {talk.description}
+                </p>
+
+                {talk.topics.length > 0 && (
+                  <div class="mt-4 flex flex-wrap gap-2">
+                    {talk.topics.map((topic) => (
+                      <span class="rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-0.5 text-[0.7rem] font-medium text-amber-300">
+                        {topic}
+                      </span>
+                    ))}
+                  </div>
+                )}
+
+                <div class="mt-4">
+                  <a
+                    href={talk.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    class="inline-flex items-center gap-1.5 text-xs font-medium text-amber-400 underline-offset-4 hover:text-amber-300 hover:underline"
+                  >
+                    View event
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 16 16"
+                      fill="currentColor"
+                      class="h-3 w-3"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M8.914 6.025a.75.75 0 0 1 1.06 0 3.5 3.5 0 0 1 0 4.95l-2 2a3.5 3.5 0 0 1-4.95-4.95l1.17-1.17a.75.75 0 0 1 1.06 1.06L3.85 9.086a2 2 0 1 0 2.828 2.828l2-2a2 2 0 0 1 0-2.828.75.75 0 0 1 1.06 0ZM7.086 9.975a.75.75 0 0 1-1.06 0 3.5 3.5 0 0 1 0-4.95l2-2a3.5 3.5 0 0 1 4.95 4.95l-1.17 1.17a.75.75 0 0 1-1.06-1.06l1.17-1.17a2 2 0 1 0-2.828-2.828l-2 2a2 2 0 0 1 0 2.828.75.75 0 0 1-1.06 0Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                {talk.video && (
+                  <div class="mt-6">
+                    <p class="mb-2 text-[0.7rem] font-semibold uppercase tracking-[0.15em] text-stone-500">
+                      Recording
+                    </p>
+                    <div class="overflow-hidden rounded-lg border border-amber-500/20">
+                      <iframe
+                        src={`https://www.youtube-nocookie.com/embed/${talk.video}`}
+                        title={`${talk.name} — recording`}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        loading="lazy"
+                        class="aspect-video w-full"
+                      />
+                    </div>
+                  </div>
+                )}
+
+                {talk.slides && (
+                  <div class="mt-6">
+                    <p class="mb-2 text-[0.7rem] font-semibold uppercase tracking-[0.15em] text-stone-500">
+                      Slides
+                    </p>
+                    {talk.notEmbeddable && (
+                      <p class="mb-2 text-sm text-stone-400">
+                        <a
+                          href={talk.slides}
+                          target="_blank"
+                          rel="noreferrer"
+                          class="inline-flex items-center gap-1.5 text-xs font-medium text-amber-400 underline-offset-4 hover:text-amber-300 hover:underline"
+                        >
+                          View slides
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 16 16"
+                            fill="currentColor"
+                            class="h-3 w-3"
+                            aria-hidden="true"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M8.914 6.025a.75.75 0 0 1 1.06 0 3.5 3.5 0 0 1 0 4.95l-2 2a3.5 3.5 0 0 1-4.95-4.95l1.17-1.17a.75.75 0 0 1 1.06 1.06L3.85 9.086a2 2 0 1 0 2.828 2.828l2-2a2 2 0 0 1 0-2.828.75.75 0 0 1 1.06 0ZM7.086 9.975a.75.75 0 0 1-1.06 0 3.5 3.5 0 0 1 0-4.95l2-2a3.5 3.5 0 0 1 4.95 4.95l-1.17 1.17a.75.75 0 0 1-1.06-1.06l1.17-1.17a2 2 0 1 0-2.828-2.828l-2 2a2 2 0 0 1 0 2.828.75.75 0 0 1-1.06 0Z"
+                              clip-rule="evenodd"
+                            />
+                          </svg>
+                        </a>
+                      </p>
+                    )}
+                    {!talk.notEmbeddable && (
+                      <div class="overflow-hidden rounded-lg border border-amber-500/20">
+                        <iframe
+                          src={talk.slides}
+                          title={`${talk.name} — slides`}
+                          loading="lazy"
+                          class="h-72 w-full bg-stone-800"
+                        />
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            </details>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>
