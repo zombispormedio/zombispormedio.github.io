@@ -1,7 +1,7 @@
 ---
 const skillGroups = [
   {
-    title: "Languages and Web",
+    title: "Backend and Frontend",
     items: [
       "Go",
       "TypeScript",
@@ -11,15 +11,22 @@ const skillGroups = [
       "React",
       "TailwindCSS",
       "Vite",
+      "SQL",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "Kafka",
     ],
   },
   {
-    title: "Infrastructure and Platform",
-    items: ["Kubernetes", "Istio", "Terraform", "AWS", "Azure", "Google Cloud"],
-  },
-  {
-    title: "DevOps and Observability",
+    title: "Infrastructure and DevOps",
     items: [
+      "Kubernetes",
+      "Istio",
+      "Terraform",
+      "AWS",
+      "Azure",
+      "Google Cloud",
       "GitOps",
       "CI/CD Pipelines",
       "ArgoCD",
@@ -28,10 +35,6 @@ const skillGroups = [
       "Honeycomb",
       "Incident Management",
     ],
-  },
-  {
-    title: "Data and Messaging",
-    items: ["SQL", "PostgreSQL", "MongoDB", "Redis", "Kafka"],
   },
 ];
 ---
@@ -49,7 +52,7 @@ const skillGroups = [
     {
       skillGroups.map((group, idx) => (
         <article
-          class={`animate-fade-up rounded-2xl border border-amber-600/30 bg-amber-50/70 p-6 shadow-sm transition hover:shadow-lg dark:border-amber-500/20 dark:bg-stone-900/70 ${idx === 1 ? "animate-delay-1" : ""} ${idx === 2 ? "animate-delay-2" : ""} ${idx === 3 ? "animate-delay-3" : ""}`}
+          class={`animate-fade-up rounded-2xl border border-amber-600/30 bg-amber-50/70 p-6 shadow-sm transition hover:shadow-lg dark:border-amber-500/20 dark:bg-stone-900/70 ${idx === 1 ? "animate-delay-1" : ""}`}
         >
           <h3 class="text-sm font-semibold uppercase tracking-[0.18em] text-amber-700 dark:text-amber-300">
             {group.title}
