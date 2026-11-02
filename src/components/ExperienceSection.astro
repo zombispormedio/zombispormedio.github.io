@@ -1,5 +1,14 @@
 ---
-const experiences = [
+type Experience = {
+  role: string;
+  company: string;
+  url?: string;
+  date: string;
+  description: string[];
+  redacted?: boolean;
+};
+
+const experiences: Experience[] = [
   {
     role: "Senior Software Engineer (Platform Infrastructure)",
     company: "[Redacted company - reach out for more information]",
@@ -14,6 +23,7 @@ const experiences = [
   {
     role: "Full Stack Engineer",
     company: "Trazable",
+    url: "https://trazable.io/",
     date: "March 2022 - October 2023",
     description: [
       "Developed SaaS capabilities for food supply chain traceability and quality assurance on microservices architecture.",
@@ -23,6 +33,7 @@ const experiences = [
   {
     role: "Software Engineer, Site Reliability (SRE)",
     company: "Lansweeper",
+    url: "https://www.lansweeper.com/",
     date: "April 2020 - February 2022",
     description: [
       "Led migration to GitOps delivery with ArgoCD to modernize deployment workflows and increase environment stability.",
@@ -33,6 +44,7 @@ const experiences = [
   {
     role: "Full Stack Engineer (Product)",
     company: "Lansweeper",
+    url: "https://www.lansweeper.com/",
     date: "August 2019 - April 2020",
     description: [
       "Built inventory and identity management features with Node.js, TypeScript, and GraphQL.",
@@ -40,7 +52,8 @@ const experiences = [
   },
   {
     role: "Full Stack Engineer",
-    company: "Suez",
+    company: "Suez (now Veolia)",
+    url: "https://www.veolia.es/",
     date: "October 2017 - July 2019",
     description: [
       "Contributed to IoT asset management systems and enterprise applications using Java, Node.js, Kafka, and MongoDB.",
@@ -49,24 +62,27 @@ const experiences = [
   {
     role: "Android Developer",
     company: "From The Bench",
+    url: "https://www.fromthebenchgames.com/",
     date: "April 2017 - October 2017",
     description: [],
   },
   {
     role: "Android Developer",
     company: "Cookpad",
+    url: "https://cookpad.com",
     date: "November 2016 - January 2017",
     description: [],
   },
   {
     role: "Full Stack Developer (Intern)",
     company: "Sonneil",
+    url: "https://www.sonneil.com",
     date: "June 2015 - December 2015",
     description: [],
   },
 ];
 
-const hasExpandableContent = (experience: (typeof experiences)[number]) =>
+const hasExpandableContent = (experience: Experience) =>
   experience.redacted || experience.description.length > 0;
 
 const initiallyVisibleExperiences = 5;
@@ -107,7 +123,20 @@ const redactedBadgeLabel = "Private";
                     </h3>
                     <div class="mt-1 flex flex-wrap items-center gap-2 text-sm text-stone-600 dark:text-stone-300">
                       <p>
-                        {item.redacted ? redactedCompanyLabel : item.company}
+                        {item.redacted ? (
+                          redactedCompanyLabel
+                        ) : item.url ? (
+                          <a
+                            href={item.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="underline decoration-amber-500/50 underline-offset-2 transition hover:text-amber-700 hover:decoration-amber-600 dark:hover:text-amber-300"
+                          >
+                            {item.company}
+                          </a>
+                        ) : (
+                          item.company
+                        )}
                       </p>
                       {item.redacted && (
                         <span class="rounded-full border border-amber-500/35 bg-amber-500/10 px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-amber-800 dark:border-amber-400/30 dark:bg-amber-400/10 dark:text-amber-200">
@@ -146,7 +175,18 @@ const redactedBadgeLabel = "Private";
                     {item.role}
                   </h3>
                   <p class="text-sm text-stone-600 dark:text-stone-300">
-                    {item.company}
+                    {item.url ? (
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="underline decoration-amber-500/50 underline-offset-2 transition hover:text-amber-700 hover:decoration-amber-600 dark:hover:text-amber-300"
+                      >
+                        {item.company}
+                      </a>
+                    ) : (
+                      item.company
+                    )}
                   </p>
                 </div>
                 <span class="rounded border border-amber-600/30 bg-white px-2 py-1 text-xs uppercase tracking-[0.15em] text-amber-700 dark:border-amber-500/30 dark:bg-stone-800 dark:text-amber-300">
